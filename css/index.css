@@ -117,6 +117,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Tablet styles */
 @media (min-width: 500px) {
+  .container{
+    width: 800px;
+  }
   .nav {
     /* changes the flex direction from collum to row & adds
     space between each anchor tag */
@@ -126,5 +129,20 @@ h1, h2, h3, h4, h5, h6 {
 
   .logo-container, .nav a {
     border-bottom: 0px;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width:800px){
+  .container{
+    width: 1000px;
+  }
+  .header{
+    flex-direction: row-reverse;
+  }
+  .nav{
+  }
+  .logo-container, .nav a{
+
   }
 }
