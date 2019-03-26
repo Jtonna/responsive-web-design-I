@@ -63,7 +63,6 @@ html, body {
   height: 100%;
   font-family: 'Titillium Web', sans-serif;
 }
-
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Bangers', cursive;
   letter-spacing: 1px;
@@ -114,7 +113,9 @@ h1, h2, h3, h4, h5, h6 {
 .logo-container, .nav a {
   border-bottom: 1px solid black;
 }
-
+.middle-img{
+  width: 100%;
+}
 /* Tablet styles */
 @media (min-width: 500px) {
   .container{
