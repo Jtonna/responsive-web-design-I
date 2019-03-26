@@ -1,7 +1,6 @@
-/* css reset:
-	http://meyerweb.com/eric/tools/css/reset/
-	v2.0 | 20110126
-	License: none (public domain)
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
 */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -53,96 +52,79 @@ table {
   border-spacing: 0;
 }
 
-/* Set every element's box-sizing to border-box */
+/* lets set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
 }
 
+/* css refactored 3/25/2019
+last update 3/25/2019 */
 html, body {
   height: 100%;
   font-family: 'Titillium Web', sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Bangers', cursive;
   letter-spacing: 1px;
-  margin-bottom: 15px;
+  margin: 0 0 15px;
 }
 
-/* Your code starts here! */
-html, body {
+/* Static Styles */
+/* Mobile Styles*/
+.container {
   margin: 0 auto;
+  /* prevents the content in the container from getting outside the box. */
   width: 500px;
-  background: lightgray;
 }
 
-.container {}
-
-.header {}
+.header {
+  padding: 15px 0 0;
+  display: flex;
+  flex-direction: column;
+  /* aligns everything in the header to the center of the Page
+  unless 100% width is specified on an anchor element */
+  align-items: center;
+}
 
 .nav {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 100%
 }
 
 .nav a {
-  padding: 20px 0 20px;
-  font-size: 20px;
-  text-decoration: none;
-  color: gray;
+  font-size: 18px;
   font-weight: bold;
-  border-bottom: 1px dashed red;
-}
-
-.nav a:hover {
-  color: darkblue;
-}
-
-.logo {}
-
-.section1 {
-  margin: 10px 0 0;
-  font-size: 70px;
   text-align: center;
-  line-height: .8;
-  padding: 0 0 60px;
-  border-bottom: 2px solid black;
+  padding: 20px 0 20px;
+  text-decoration: none;
 }
 
-.groups-of-x {}
-
-.groups-of-x-center {}
-
-.boxed-content-nobg {}
-
-.box-within-a-box {
-  padding: 20px 0 0;
-}
-
-.box-within-a-box p {
-  padding: 0 0 40px;
-}
-
-.custom-button {
-  border: 1px solid black;
-  padding: 10px 50px 10px;
-}
-
-.circle-img {
-  display: none;
-}
-
-.section2 {}
-
-.middle-img {
+.logo-container {
+  padding-bottom: 20px;
+  /* inorder for the logo to be centered width must be 100%
+  and text-align must be set to center as flex's align-items
+  seems to do nothing. I dont know why this works.
+  please help */
   width: 100%;
+  text-align: center;
 }
 
-.contact {}
+.logo-container, .nav a {
+  border-bottom: 1px solid black;
+}
 
-.contact-container {}
+/* Tablet styles */
+@media (min-width: 500px) {
+  .nav {
+    /* changes the flex direction from collum to row & adds
+    space between each anchor tag */
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-footer {
-  text-align: center;
+  .logo-container, .nav a {
+    border-bottom: 0px;
+  }
 }
