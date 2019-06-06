@@ -1,3 +1,149 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
 
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* lets set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+
+/* css refactored 3/25/2019
+last update 3/25/2019 */
+html, body {
+  height: 100%;
+  font-family: 'Titillium Web', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bangers', cursive;
+  letter-spacing: 1px;
+  margin: 0 0 15px;
+}
+
+/* Static Styles */
+/* Mobile Styles*/
+.container {
+  margin: 0 auto;
+  /* prevents the content in the container from getting outside the box. */
+  width: 500px;
+}
+
+.header {
+  padding: 15px 0 0;
+  display: flex;
+  flex-direction: column;
+  /* aligns everything in the header to the center of the Page
+  unless 100% width is specified on an anchor element */
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%
+}
+
+.nav a {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 0 20px;
+  text-decoration: none;
+}
+
+.logo-container {
+  padding-bottom: 20px;
+  /* inorder for the logo to be centered width must be 100%
+  and text-align must be set to center as flex's align-items
+  seems to do nothing. I dont know why this works.
+  please help */
+  width: 100%;
+  text-align: center;
+}
+
+.logo-container, .nav a {
+  border-bottom: 1px solid black;
+}
+.middle-img{
+  width: 100%;
+}
+/* Tablet styles */
+@media (min-width: 500px) {
+  .container{
+    width: 800px;
+  }
+  .nav {
+    /* changes the flex direction from collum to row & adds
+    space between each anchor tag */
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .logo-container, .nav a {
+    border-bottom: 0px;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width:800px){
+  .container{
+    width: 1000px;
+  }
+  .header{
+    flex-direction: row-reverse;
+  }
+  .nav{
+  }
+  .logo-container, .nav a{
+
+  }
+}
